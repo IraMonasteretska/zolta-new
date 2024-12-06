@@ -49,6 +49,11 @@ body * {
         font-size: 16px;
         outline: none;
         padding-right: 50px;
+        transition: 0.3s;
+
+        &:focus {
+            border-color: #556ee6;
+        }
     }
 
     .searchbtn {
@@ -62,10 +67,15 @@ body * {
         right: 5px;
         top: 5px;
         cursor: pointer;
+        transition: 0.3s;
 
         img {
             vertical-align: top;
             width: 30px;
+        }
+
+        &:hover {
+            opacity: 0.7;
         }
     }
 }
@@ -169,6 +179,7 @@ body * {
     }
 
 }
+
 .anntabrow {
     display: flex;
     flex-wrap: wrap;
@@ -200,7 +211,7 @@ body * {
             font-size: 16px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;  
+            -webkit-box-orient: vertical;
             overflow: hidden;
 
             &:last-child {
@@ -253,6 +264,11 @@ body * {
         border: 1px solid #bdbdc2;
         outline: none;
         padding-left: 20px;
+        transition: 0.3s;
+
+        &:focus {
+            border-color: #556ee6;
+        }
     }
 
     .annsubm {
@@ -264,9 +280,138 @@ body * {
         border: none;
         border-radius: 8px;
         height: 46px;
+        transition: 0.3s;
+
+        &:hover {
+            background: #485ec4;
+        }
     }
 
 
 
 
+}
+
+@media(max-width:1600.8px) {
+
+    .announcement-topsection h1 {
+        font-size: 50px;
+    }
+
+}
+
+@media(max-width:1440.8px) {
+
+    .announcement-topsection h1 {
+        font-size: 42px;
+    }
+
+    .announcement-topsection .imgwrap img {
+        max-width: 200px;
+    }
+}
+
+@media(max-width:991.8px) {
+    .announcement-topsection .imgwrap {
+        display: none;
+    }
+}
+
+@media(max-width:575.8px) {
+    .announcement-topsection h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .anninpfield input {
+        min-height: 42px;
+        padding-left: 10px;
+    }
+
+    .anninpfield .searchbtn {
+        width: 36px;
+        height: 36px;
+        top: 3px;
+
+        img {
+            width: 24px;
+        }
+    }
+
+    .announcement-topsection {
+        padding: 50px 0 30px;
+    }
+
+    .announcements-tabswrap .nav-tabs .nav-link  {
+        width: 100%;
+        padding: 5px 10px;
+    }
+
+    .announcements-tabswrap .nav-tabs .nav-link {
+        min-width: initial;
+        width: 100%;
+    }
+    
+    .announcements-tabswrap ul {
+        width: 100%;
+        display: flex;
+
+        li {
+           width: 100%;
+           max-width: 33.333%;
+           flex: 0 0 33.333%;
+        }
+    }
+
+    .anntabrow .date {
+        max-width: 70px;
+        flex: 0 0 70px;
+        font-size: 14px;
+    }
+
+    .anntabrow .descr {
+        max-width: calc(100% - 70px);
+        flex: 0 0 calc(100% - 70px);
+        padding-left: 10px;
+    }
+
+    .anntabrow .descr p {
+        font-size: 14px;
+    }
+
+    .anntabrow .descr .title {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .anntabrow {
+        margin-bottom: 20px;
+    }
+
+    .announcements-subscribe .title {
+        font-size: 21px;
+    }
+
+    .announcements-subscribe__form .annemail,
+    .announcements-subscribe__form .annsubm {
+        max-width: 100%;
+        flex: 0 0 100%;
+        height: 42px;
+    }
+
+    .announcements-subscribe__form .annemail {
+        margin-bottom: 10px;
+    }
+
+    .announcements-subscribe__form .annsubm {
+        font-size: 15px;
+    }
+
+    .announcements-subscribe {
+        padding: 50px 0;
+    }
+
+    .announcements-subscribe {
+        margin-top: 40px;
+    }
 }
